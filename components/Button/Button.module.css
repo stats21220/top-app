@@ -18,15 +18,39 @@
     border: 1px solid var(--white);
     color: var(--white);
 }
+
+.primary svg,
+.ghost:hover svg {
+    fill: var(--white);
+}
+
 .primary:hover {
     background: var(--primary-hover);
 }
+
 .ghost {
     background: none;
     border: 1px solid var(--gray-light);
     color: var(--black);
 }
+
 .ghost:hover {
     background: var(--primary);
     color: var(--white);
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: 10px;
+
+}
+
+.right {
+    transform: rotate(0deg);
+    transition: all 0.2s;
+}
+
+.down {
+    transform: rotate(90deg);
+    transition: all 0.2s;
 }

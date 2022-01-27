@@ -1,56 +1,69 @@
 .tag {
-    display: inline-block;
-    box-sizing: border-box;
-    margin-right: 5px;
-    border-radius: 20px;
+	display: inline-block;
+
+	box-sizing: border-box;
+	margin-right: 5px;
+
+	border-radius: 20px;
 }
 
 .s {
-    min-height: 22px;
-    padding: 5px 10px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 12px;
-    text-align: center;
+	min-height: 22px;
+	padding: 5px 10px;
+
+	text-align: center;
+
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 12px;
 }
 
 .m {
-    min-height: 25px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 14px;
-    text-align: center;
+	min-height: 25px;
+
+	text-align: center;
+
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 14px;
 }
 
 .ghost {
-    padding: 5px 12px;
-    border: 1px solid var(--gray-light);
-    background: var(--white);
+	padding: 5px 12px;
+
+	border: 1px solid var(--gray-light);
+	background: var(--white);
 }
 
 .red {
-    padding: 3px 8px;
-    line-height: 19px;
-    color: var(--white);
-    background: #DE0000;
+	padding: 3px 8px;
+
+	color: var(--white);
+	background: #DE0000;
+
+	line-height: 19px;
 }
 
 .gray {
-    background: var(--gray);
-    color: var(--white);
-    line-height: 14px;
+	color: var(--white);
+	background: var(--gray);
+
+	line-height: 14px;
 }
 
 .green {
-    padding: 5px 7px;
-    background: var(--green-light);
-    color: var(--green);
-    line-height: 12px;
+	padding: 5px 7px;
+
+	color: var(--green);
+	background: var(--green-light);
+
+	line-height: 12px;
 }
 
 .primary {
-    background: none;
-    border: 1px solid var(--primary);
-    color: var(--primary);
-    box-sizing: border-box;
+	box-sizing: border-box;
+
+	color: var(--primary);
+	border: 1px solid var(--primary);
+	background: none;
 }

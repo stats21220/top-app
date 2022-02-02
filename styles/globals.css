@@ -6,7 +6,7 @@ body {
 	color: var(--black);
 	background: #F5F6F8;
 
-	font-family: "Roboto", sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {
@@ -21,13 +21,13 @@ a {
 
 :root {
 	--black: #3B434E;
-	--gray: #B3C0D9;
 	--gray-light: #EBEBEB;
+	--gray-dark: #787D85;
 	--white: white;
 	--primary: #7653FC;
-	--primary-hover: #4E27EE;
+	--primary-hover: #6344df;
 	--red: #FC836D;
 	--green: #1DC37E;
 	--green-light: #C8F8E4;
-	--font-family: "Roboto", sans-serif;
+	--font-family: 'Noto Sans KR', sans-serif;
 }

@@ -1,6 +1,6 @@
 .sort {
 	display: grid;
-	grid-template-columns:  auto auto;
+	grid-template-columns: auto auto;
 	gap: 40px;
 }
 
@@ -8,7 +8,9 @@
 	display: grid;
 	grid-template-columns: 20px 1fr;
 	gap: 8px;
+
 	align-items: center;
+
 	cursor: pointer;
 }
 
@@ -20,13 +22,14 @@
 	display: none;
 }
 
-
 .active {
-	font-weight: bold;
 	color: var(--primary);
+
+	font-weight: bold;
 }
 
 .active .sortIcon {
 	display: block;
+
 	margin-right: 8px;
 }

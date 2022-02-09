@@ -34,7 +34,7 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
 	  </>}
       {page.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{__html: page.seoText}}/>}
       <Htag tag="h2">Получаемые навыки</Htag>
-      {page.tags && page.tags.map(t => (<Tag size="s" color="primary" key={t}>{t}</Tag>))}
+      {page.tags && page.tags.map(t => (<Tag size="s" color="primary" key={t} className={styles.tag}>{t}</Tag>))}
     </div>
   );
 };

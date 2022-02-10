@@ -4,6 +4,8 @@
 	grid-template-columns: auto 1fr auto;
 	justify-items: left;
 	gap: 29px;
+	margin-bottom: 30px;
+	white-space: nowrap;
 }
 
 .hhTitle {
@@ -23,11 +25,12 @@
 }
 
 .seo h2 {
+	margin-top: 50px;
+	margin-bottom: 25px;
+
 	font-size: 22px;
 	font-weight: 500;
 	line-height: 30px;
-	margin-top: 50px;
-	margin-bottom: 25px;
 }
 
 .seo h3 {
@@ -36,4 +39,14 @@
 	font-size: 20px;
 	font-weight: 600;
 	line-height: 27px;
+}
+
+.tag {
+	margin-bottom: 5px;
+}
+
+@media screen and (max-width: 640px) {
+	.title {
+		grid-template-columns: auto 1fr;
+	}
 }

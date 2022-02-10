@@ -1,5 +1,5 @@
 import {TopPageComponentProps} from './TopPageComponent.props';
-import {Advantages, HhData, Htag, Sort, Tag} from '../../components';
+import {Advantages, HhData, Htag, Product, Sort, Tag} from '../../components';
 import styles from './TopPageComponent.module.css'
 import {TopLevelCategory} from '../../interfaces/page.interface';
 import {SortEnum} from '../../components/Sort/Sort.props';
@@ -21,7 +21,7 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
         <Sort sort={sort} setSort={setSort}/>
       </div>
       <div>
-        {sortedProducts && sortedProducts.map(p => (<div key={p._id}>{p.title}</div>))}
+        {sortedProducts && sortedProducts.map(p => (<Product key={p._id} product={p}/>))}
       </div>
       <div className={styles.hhTitle}>
         <Htag tag="h2">Вакансии - {page.category}</Htag>
@@ -34,7 +34,7 @@ export const TopPageComponent = ({page, products, firstCategory}: TopPageCompone
 	  </>}
       {page.seoText && <div className={styles.seo} dangerouslySetInnerHTML={{__html: page.seoText}}/>}
       <Htag tag="h2">Получаемые навыки</Htag>
-      {page.tags && page.tags.map(t => (<Tag size="s" color="primary" key={t}>{t}</Tag>))}
+      {page.tags && page.tags.map(t => (<Tag size="s" color="primary" key={t} className={styles.tag}>{t}</Tag>))}
     </div>
   );
 };

@@ -88,6 +88,10 @@
 	line-height: 19px;
 }
 
+.rateTitle a {
+	color: var(--primary);
+}
+
 .month {
 	font-size: 14px;
 	font-weight: 400;

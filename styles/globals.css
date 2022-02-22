@@ -19,17 +19,31 @@ a {
 	box-sizing: border-box;
 }
 
+.visuallyHidden:not(:focus):not(:active) {
+	position: absolute;
+
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+
+	border: 0;
+}
+
 :root {
 	--black: #3B434E;
-	--gray-dark: #A4A4A4;
+	--gray-dark: #707070;
 	--gray: #B3C0D9;
 	--gray-light: #EBEBEB;
 	--white: white;
-	--primary: #7653FC;
+	--primary: #7351F5;
 	--primary-hover: #4E27EE;
-	--red: #f8aca0;
+	--red: #F8ACA0;
 	--red-light: #FFD9D6FF;
-	--green: #1DC37E;
+	--green: #127A4F;
 	--green-light: #C8F8E4;
 	--font-family: "Roboto", sans-serif;
 }

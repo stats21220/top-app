@@ -1,10 +1,12 @@
 .title {
 	display: grid;
-	align-items: baseline;
+	align-items: center;
 	grid-template-columns: auto 1fr auto;
 	justify-items: left;
-	gap: 29px;
+	gap: 10px;
+
 	margin-bottom: 30px;
+
 	white-space: nowrap;
 }
 

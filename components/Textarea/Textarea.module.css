@@ -1,8 +1,9 @@
 .textarea {
+	width: 100%;
 	padding: 7px 15px;
 
-	width: 100%;
 	resize: unset;
+
 	color: var(--black);
 	border: none;
 	border-radius: 5px;
@@ -25,13 +26,16 @@
 
 .textareaWrapper {
 	position: relative;
+
 	display: block;
 }
 
 .errorMessage {
 	position: absolute;
-	left: 10px;
 	bottom: -10px;
-	font-size: 10px;
+	left: 10px;
+
 	color: var(--red);
+
+	font-size: 10px;
 }

@@ -29,6 +29,8 @@
 	position: absolute;
 	bottom: -20px;
 	left: 10px;
-	font-size: 10px;
+
 	color: var(--red);
+
+	font-size: 10px;
 }

@@ -2,6 +2,10 @@
 	fill: var(--primary);
 }
 
+.star {
+	display: inline-block;
+}
+
 .star svg {
 	margin-right: 5px;
 }
@@ -20,8 +24,10 @@
 
 .errorMessage {
 	position: absolute;
-	left: -20px;
 	bottom: -20px;
-	font-size: 10px;
+	left: -20px;
+
 	color: var(--red);
+
+	font-size: 10px;
 }

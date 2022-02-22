@@ -68,13 +68,15 @@
 .credit {
 	align-self: flex-end;
 
+	white-space: nowrap;
+
 	font-size: 20px;
 	line-height: 27px;
-	white-space: nowrap;
 }
 
 .rating {
 	align-self: flex-end;
+
 	white-space: nowrap;
 }
 
@@ -162,9 +164,10 @@
 }
 
 .reviews {
+	overflow: hidden;
+
 	margin-top: -30px;
 	margin-bottom: 30px;
-	overflow: hidden;
 	padding: 30px;
 }
 
@@ -172,20 +175,21 @@
 	.product {
 		grid-template-columns: 70px 30px auto 40px auto 40px 1fr;
 		grid-template-areas:
-		"logo . title title title title title"
-		"logo . tags tags tags tags tags"
-		"price price price . credit . rating"
-		"priceTitle priceTitle priceTitle . creditTitle . rateTitle"
-		"hr hr hr hr hr hr hr"
-		"description description description description description description description"
-		"feature feature feature feature feature feature feature"
-		"advBlock advBlock advBlock advBlock advBlock advBlock advBlock"
-		"hr2 hr2 hr2 hr2 hr2 hr2 hr2"
-		"action action action action action action action";
+			"logo . title title title title title"
+			"logo . tags tags tags tags tags"
+			"price price price . credit . rating"
+			"priceTitle priceTitle priceTitle . creditTitle . rateTitle"
+			"hr hr hr hr hr hr hr"
+			"description description description description description description description"
+			"feature feature feature feature feature feature feature"
+			"advBlock advBlock advBlock advBlock advBlock advBlock advBlock"
+			"hr2 hr2 hr2 hr2 hr2 hr2 hr2"
+			"action action action action action action action";
 	}
 
 	.logo {
 		grid-area: logo;
+
 		margin-bottom: 20px;
 	}
 
@@ -235,6 +239,7 @@
 
 	.feature {
 		grid-area: feature;
+
 		margin-bottom: 20px;
 	}
 
@@ -259,17 +264,17 @@
 	.product {
 		grid-template-columns: 70px 30px 1fr;
 		grid-template-areas:
-		"logo . title"
-		"logo . tags"
-		"priceTitle priceTitle price"
-		"creditTitle creditTitle credit"
-		"rateTitle rateTitle rating"
-		"hr hr hr"
-		"description description description"
-		"feature feature feature"
-		"advBlock advBlock advBlock"
-		"hr2 hr2 hr2"
-		"action action action";
+			"logo . title"
+			"logo . tags"
+			"priceTitle priceTitle price"
+			"creditTitle creditTitle credit"
+			"rateTitle rateTitle rating"
+			"hr hr hr"
+			"description description description"
+			"feature feature feature"
+			"advBlock advBlock advBlock"
+			"hr2 hr2 hr2"
+			"action action action";
 	}
 
 	.price,
@@ -287,20 +292,20 @@
 	.product {
 		grid-template-columns: 1fr;
 		grid-template-areas:
-		"logo"
-		"title"
-		"tags"
-		"priceTitle"
-		"price"
-		"creditTitle"
-		"credit"
-		"rateTitle"
-		"rating"
-		"hr"
-		"description"
-		"feature"
-		"advBlock"
-		"hr2"
-		"action";
+			"logo"
+			"title"
+			"tags"
+			"priceTitle"
+			"price"
+			"creditTitle"
+			"credit"
+			"rateTitle"
+			"rating"
+			"hr"
+			"description"
+			"feature"
+			"advBlock"
+			"hr2"
+			"action";
 	}
 }

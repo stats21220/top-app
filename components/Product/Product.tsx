@@ -14,6 +14,7 @@ import {ReviewForm} from '../ReviewForm/ReviewForm';
 import {motion} from 'framer-motion';
 
 export const Product = motion(
+  // eslint-disable-next-line react/display-name
   forwardRef(
     ({product, className, ...props}: ProductProps,
      ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
@@ -31,6 +32,7 @@ export const Product = motion(
           behavior: 'smooth',
           block: 'start'
         })
+        reviewRef.current?.focus()
       }
 
       return (
@@ -46,21 +48,28 @@ export const Product = motion(
             </div>
             <div className={styles.title}>{product.title}</div>
             <div className={styles.price}>
+              <span className="visuallyHidden">цена</span>
               {priceRu(product.price)}
               {product.oldPrice &&
-			  <Tag color="green" className={styles.oldPrice}>{priceRu(product.price - product.oldPrice)}</Tag>}
+				  <Tag color="green" className={styles.oldPrice}>
+					  <span className="visuallyHidden">скидка</span>
+                    {priceRu(product.price - product.oldPrice)}
+				  </Tag>}
             </div>
             <div className={styles.credit}>
+              <span className="visuallyHidden">кредит</span>
               {priceRu(product.credit)}/<span className={styles.month}>мес</span>
             </div>
             <div className={styles.rating}>
+              <span className="visuallyHidden">{'рейтинг ' + (product.reviewAvg ?? product.initialRating)}
+              </span>
               <Rating rating={product.reviewAvg ?? product.initialRating}/>
             </div>
             <div className={styles.tags}>
               {product.categories.map(c => (<Tag key={c} color="ghost" className={styles.category}>{c}</Tag>))}
             </div>
-            <div className={styles.priceTitle}>Цена</div>
-            <div className={styles.creditTitle}>кредит</div>
+            <div className={styles.priceTitle} aria-hidden={true}>Цена</div>
+            <div className={styles.creditTitle} aria-hidden={true}>кредит</div>
             <div
               className={styles.rateTitle}>
               <a href="#ref"
@@ -81,15 +90,15 @@ export const Product = motion(
             </div>
             <div className={styles.advBlock}>
               {product.advantages &&
-			  <div className={styles.advantages}>
-				  <div className={styles.titleAdv}>Преимущества</div>
-				  <div className={styles.descriptionAdv}>{product.advantages}</div>
-			  </div>}
+				  <div className={styles.advantages}>
+					  <div className={styles.titleAdv}>Преимущества</div>
+					  <div className={styles.descriptionAdv}>{product.advantages}</div>
+				  </div>}
               {product.disAdvantages &&
-			  <div className={styles.disAdvantages}>
-				  <div className={styles.titleAdv}>Недостатки</div>
-				  <div className={styles.descriptionAdv}>{product.disAdvantages}</div>
-			  </div>}
+				  <div className={styles.disAdvantages}>
+					  <div className={styles.titleAdv}>Недостатки</div>
+					  <div className={styles.descriptionAdv}>{product.disAdvantages}</div>
+				  </div>}
             </div>
             <Divider className={cn(styles.hr, styles.hr2)}/>
             <div className={styles.action}>
@@ -99,6 +108,7 @@ export const Product = motion(
                 arrow={isReviewOpened ? 'down' : 'right'}
                 className={styles.reviewButton}
                 onClick={() => setIsReviewOpened(!isReviewOpened)}
+                aria-expanded={isReviewOpened}
               >Читать отзовы</Button>
             </div>
           </Card>
@@ -111,6 +121,7 @@ export const Product = motion(
               color="blue"
               ref={reviewRef}
               className={cn(styles.reviews)}
+              tabIndex={isReviewOpened ? 0 : -1}
             >
               {product.reviews.map(r =>
                 <div key={r._id}>
@@ -118,9 +129,11 @@ export const Product = motion(
                   <Divider/>
                 </div>
               )}
-              {<ReviewForm productId={product._id}/>}
+              {<ReviewForm productId={product._id} isOpened={isReviewOpened}/>}
             </Card>
           </motion.div>
         </div>
       );
     }));
+
+Product.displayName = 'Product'
